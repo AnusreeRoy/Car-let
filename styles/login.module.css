@@ -1,0 +1,67 @@
+.loginpg{
+    background-color: rgb(133, 159, 221);
+    display: flex;
+    justify-content: center;
+    padding: 18vh;
+  } 
+  .box{
+    height:70vh;
+    width: 25vw;
+    background-color: rgb(238, 226, 242);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+  }
+  .input{
+  justify-content:center;
+   padding:40px;
+  }
+
+  .input input{
+    border: 1px solid rgb(32, 16, 16);
+    background-color: rgb(190, 202, 236);
+    border-radius:10px;
+    height: 40px;
+    width: 18vw;
+  }
+  .input label{
+    font-size:18px;
+    color:rgb(25, 47, 106);
+    padding: 2px;
+    font-family:'Times New Roman', Times, serif;
+  }
+  .button{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(96, 126, 225);
+    border-radius:10px; 
+    height:35px;
+    width:65px;
+    display: flex;
+    justify-content: center;
+    margin-left: 16vh;
+    margin-top: 1vh;
+    }
+    .log{
+      font-family: 'Times New Roman', Times, serif;
+      color:rgb(10, 10, 86);
+      text-decoration: none;
+      font-size: 15px;
+      margin-top: 7px;
+  }
+    .signuplink{
+      padding-top:30px ;
+      padding-left: 55px;
+      color: rgb(90, 67, 153);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .loginh1{
+    text-align:center;
+    padding:15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    color:rgb(40, 67, 135);
+    font-weight: bold;
+    padding-top: 80px;
+   }
+   .signupl{
+    color: rgb(196, 140, 226);
+   }

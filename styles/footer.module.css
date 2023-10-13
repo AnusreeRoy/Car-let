@@ -1,0 +1,36 @@
+/* .footer{
+    background-color: rgb(242, 124, 124);
+    margin: 0;
+    padding: 0;
+  } */
+.footer ul{
+  display: flex;
+  padding: 2px;
+  list-style: none;
+  
+}
+.footer ul li{
+  padding: 10px;
+}
+.footerh1{
+  text-align: left;
+  padding:15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+  color:rgb(55, 1, 1);
+  font-weight: bold;
+}
+.footer p{
+  color:rgb(55, 1, 1);
+  display:inline;
+  justify-content: space-between;
+  padding-left: 15px;
+}
+.ul2{
+  padding-left: 980px;
+  
+}
+.ul3{
+  padding-left: 900px;
+  padding-top: 10px;
+}
