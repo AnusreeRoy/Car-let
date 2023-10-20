@@ -8,43 +8,33 @@ import Profile from "./Profile";
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [success, setSuccess] = useState(null);
+  const [error, setError] = useState(null);
   const router = useRouter();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    console.log('Login button clicked!');
 
     try {
-      console.log('Executing Supabase query:', email);
-      console.log(supabase);
-      const { data, error } = await supabase
+      const { data, error, success } = await supabase
         .from('signup')
         .select()
         .eq('email', email)
         .single();
 
-      console.log('Retrieved data:', data);
-      console.log('Provided password:', password);
-
       if (error) {
-        console.error('Error retrieving user:', error);
+        setError('Error retrieving user:', error);
         return;
       }
 
       if (!data || data.password !== password) {
-        console.error('Invalid email or password.');
+        setError('Invalid email or password.');
         return;
       }
-
-      console.log('User signed in successfully:', data);
-      router.push({
-        pathname: `/profile/${data.id}`,
-        query: { user: JSON.stringify(data) }
-      });
-      
-      console.log('Redirecting to profile:', `/profile/${data.id}`);
+      setSuccess('User signed in successfully:', data);
+      router.push(`/profile/${data.id}`);
     } catch (error) {
-      console.error('Error signing in:', error);
+      setError('Error signing in:', error);
     }
   }
   
@@ -73,6 +63,8 @@ const Login = () => {
           <button className={styles.button} type="submit" onClick={handleLogin}>
             Login
           </button>
+          {error && <p>{error}</p>}
+          {success && <p>{success}</p>}
         </form>
       </div>
       <div className={styles.signuplink}>

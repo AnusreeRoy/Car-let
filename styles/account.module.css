@@ -1,0 +1,64 @@
+.format{
+    width: 100%;
+    height:100vh;
+    background-color: rgb(146, 143, 180);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+
+.day{
+    height:60vh;
+    width: 22vw;
+    background-color: rgb(238, 226, 242);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    margin-top: 200px;
+    background-image: url("../public/cardaily.jpg");
+    background-size: cover;
+}
+.font{
+    font-size: 25px;
+    color: rgb(77, 61, 98);
+    display: flex;
+    justify-content: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.link{
+text-decoration: none;
+}
+.font:hover{
+    background-color:  rgb(183, 175, 207);
+}
+.week{
+    height:60vh;
+    width: 22vw;
+    background-color: rgb(238, 226, 242);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    margin-top: 200px;
+    margin-left: 30px;
+    background-image: url("../public/carweek.jpg");
+    background-size: cover;
+}
+.font2{
+    font-size: 25px;
+    color: rgb(176, 168, 186);
+    display: flex;
+    justify-content: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.font2:hover{
+    background-color:  rgb(60, 52, 83);
+}
+.month{
+    height:60vh;
+    width: 22vw;
+    background-color: rgb(238, 226, 242);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    margin-top: 200px;
+    margin-left: 30px;
+    background-image: url("../public/carmonth.jpg");
+    background-size: cover;
+}

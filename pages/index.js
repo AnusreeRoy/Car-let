@@ -3,9 +3,8 @@ import Head from "next/head";
 import Navbar from '@/components/Navbar';
 import styles from "../styles/home.module.css"  
 import ImageSlideshow from '@/components/ImagesSlideshow';
-import Drop from '@/components/Drop';
 import Footer from '@/components/Footer';
-Footer
+
 function index() {
   const images= [
     "/covcar1.jpeg",
