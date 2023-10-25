@@ -6,8 +6,8 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 }
 .box{
-    height:45vh;
-    width: 18vw;
+    height:63vh;
+    width: 22vw;
     background-color: rgb(238, 226, 242);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
@@ -16,7 +16,7 @@ grid-template-columns: 1fr 1fr 1fr;
     
 }
 .info{
-margin-left: 45px;
+margin-left: 75px;
 }
 
 .info p{
@@ -27,8 +27,17 @@ margin-left: 45px;
 .rent{
     border-radius: 6px;
     margin-left: 50px;
-    background-color:rgb(235, 233, 235)
+    background-color:rgb(235, 233, 235);
 }
 .rent:hover{
     background-color: rgb(101, 91, 146);
+}
+
+.link{
+    text-decoration: none;
+}
+.img{
+    display:flex;
+    justify-content: center;
+    padding: 12px;
 }

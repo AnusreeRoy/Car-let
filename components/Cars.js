@@ -8,7 +8,6 @@ function Cars() {
   const [cars, setCars] = useState(null)
 
   useEffect(() => {
-
     const fetchCars = async () =>{
         const {data, error} = await supabase
         .from('cars')

@@ -25,6 +25,7 @@ function index() {
           </div>
           <div >
       <ImageSlideshow/>
+      
           </div>
           <div className={styles.footer}>
           <h1 className={styles.h1}>Car-Let</h1> 

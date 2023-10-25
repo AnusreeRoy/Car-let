@@ -1,0 +1,11 @@
+.car{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(125, 78, 18);
+
+}
+.img{
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;  
+}
