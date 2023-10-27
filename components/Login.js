@@ -3,7 +3,8 @@ import styles from "../styles/login.module.css";
 import Link from "next/link";
 import { useRouter } from 'next/router';
 import supabase from "@/config/supabaseClient";
-import Profile from "./Profile";
+
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -32,7 +33,8 @@ const Login = () => {
         return;
       }
       setSuccess('User signed in successfully:', data);
-      router.push(`/profile/${data.id}`);
+      router.push(`/account/${data.id}`);
+      
     } catch (error) {
       setError('Error signing in:', error);
     }
@@ -61,10 +63,9 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button className={styles.button} type="submit" onClick={handleLogin}>
-            Login
-          </button>
-          {error && <p>{error}</p>}
-          {success && <p>{success}</p>}
+          Login</button>
+          {error && <p>{error}</p>} 
+          {success && <p>{success}</p>} 
         </form>
       </div>
       <div className={styles.signuplink}>

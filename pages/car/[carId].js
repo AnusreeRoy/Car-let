@@ -1,15 +1,14 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import supabase from "@/config/supabaseClient";
+import Link from "next/link";
 import Image from "next/image";
-
 const CarDetails = () => {
   const router = useRouter();
   const { carId } = router.query;
   const [car, setCar] = useState(null);
 
   useEffect(() => {
-    // Fetch the car details using carId
     const fetchCarDetails = async () => {
       const { data, error } = await supabase
         .from("cars")
@@ -35,19 +34,23 @@ const CarDetails = () => {
   return (
     <div>
       {car ? (
-        <div>
-                  <Image
+        <div> 
+            <Image
     src={car.carimg}
     width={700}
     height={650}
     objectFit="cover"
-    />
+    /> 
+    
           <h2>Car Details</h2>
           <p>Car Name: {car.carname}</p>
           <p>Car Number: {car.carnumber}</p>
           <p>Rent type: {car.renttype}</p>
-    <p>Rent fare: {car.carfare}</p>
-    <p>Car Brand: {car.Brand}</p>
+          <p>Rent fare: {car.carfare}</p>
+          <p>Car Brand: {car.Brand}</p>
+          <button>
+          Rent
+            </button>
         </div>
       ) : (
         <p>Loading car details...</p>

@@ -3,7 +3,7 @@ import styles from "../styles/account.module.css";
 import Head from 'next/head';
 import Title from '@/components/Title';
 import Link from 'next/link';
-function account() {
+function Pro() {
   return (
     <>
         <Head> 
@@ -35,4 +35,4 @@ function account() {
   )
 }
 
-export default account
+export default Pro
