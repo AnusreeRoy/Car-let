@@ -1,7 +1,7 @@
 import Carsmonth from "@/components/Carsmonth";
 import React from "react";
 
-function carsday() {
+function Carsmonth() {
   return (
     <div>
       <Carsmonth />
@@ -9,4 +9,4 @@ function carsday() {
   );
 }
 
-export default carsday;
+export default Carsmonth;

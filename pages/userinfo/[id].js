@@ -4,7 +4,7 @@ import supabase from "@/config/supabaseClient";
 import styles from "../../styles/userdetails.module.css";
 import Link from "next/link";
 import { BiSolidUser } from "react-icons/bi";
-const Profile = () => {
+const Userinfo = () => {
   const router = useRouter();
   const { id } = router.query;
   const [user, setUser] = useState(null);
@@ -81,4 +81,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Userinfo;

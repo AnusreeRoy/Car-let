@@ -2,7 +2,8 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import supabase from "@/config/supabaseClient";
 import Pro from "@/components/Pro";
-const Profile = () => {
+
+const Account = () => {
   const router = useRouter();
   const { id } = router.query;
   const [user, setUser] = useState(null);
@@ -43,4 +44,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Account;
