@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/slide.module.css";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const ImagesSlideshow = () => {
   const images = ["/covcar3.jpg", "/covcar1.jpg", "/covcar2.jpg"]; // Add your image paths here

@@ -1,0 +1,48 @@
+.page{
+    background-color: rgb(224, 221, 229);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form{
+    margin-left: 600px;
+    margin-top: 150px;
+    padding: 10px;
+    height:60vh;
+    width: 25vw;
+    background-color: #b5aec4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+}
+.form h1{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+.form p{
+font-size: 20px;
+margin-left: 20px;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.field input{
+    height: 25px;
+    width: 350px;
+    margin-left: 15px;
+   
+}
+.button{
+    height: 30px;
+    width: 50px;
+    border-radius: 6px;
+    margin-left: 160px;
+    
+}
+.link{
+    text-decoration: none;
+    color: black;
+}

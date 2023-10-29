@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Caritem from "./Caritem";
 import styles from "../styles/cars.module.css";
 
-function Cars() {
+function Carsmonth() {
   const [fetchError, setFetchError] = useState(null);
   const [cars, setCars] = useState(null);
 
@@ -13,7 +13,7 @@ function Cars() {
       const { data, error } = await supabase
       .from("cars")
       .select()
-      .eq("renttype","day");
+      .eq("renttype","month");
       
       if (error) {
         setFetchError("could not fetch");
@@ -43,4 +43,4 @@ function Cars() {
   );
 }
 
-export default Cars;
+export default Carsmonth;
