@@ -4,23 +4,23 @@ import Link from "next/link";
 import Head from "next/head";
 import supabase from "@/config/supabaseClient";
 function signup() {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
+  const [rentorfName, setFRentorName] = useState("");
+  const [rentorlName, setLRentorName] = useState("");
+  const [rentorEmail, setRentorEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [number, setNumber] = useState("");
+  const [rentorNumber, setRentorNumber] = useState("");
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!firstname || !lastname || !email || !password || !number) {
+    if (!rentorfName || !rentorlName || !rentorEmail || !password || !rentorNumber) {
       setError("Please fill up all the fields correctly");
       return;
     }
 
     const { data, error, success } = await supabase
-      .from("signup")
-      .insert([{ firstname, lastname, email, password, number }]);
+      .from("rentorsignup")
+      .insert([{rentorfName, rentorlName, rentorEmail, password, rentorNumber }]);
 
     if (error) {
       console.log(data);
@@ -35,37 +35,36 @@ function signup() {
       console.log(data);
       setError(null);
       setSuccess("Successful");
-      router.push(`/account/${data.id}`);
+      router.push(`/rentoraccount/${data.id}`);
     }
   };
   return (
       <div className={styles.signupbox}>
         <div className={styles.signupform}>
           <form onSubmit={handleSubmit}>
-            <label for="fname">First name:</label>
+            <label for="Name">First Name:</label>
             <input
               className={styles.splaceholder}
               type="text"
               placeholder=""
-              value={firstname}
-              onChange={(e) => setFirstname(e.target.value)}
-            />
-            <br />
-            <label for="lname">Last name:</label>
+              value={rentorfName}
+              onChange={(e) => setFRentorName(e.target.value)}
+            /><br/>
+            <label for="Name">Last Name:</label>
             <input
               className={styles.splaceholder}
               type="text"
               placeholder=""
-              value={lastname}
-              onChange={(e) => setLastname(e.target.value)}
+              value={rentorlName}
+              onChange={(e) => setLRentorName(e.target.value)}
             />
             <label for="Email">{"Email:"}</label>
             <input
               className={styles.splaceholder}
               type="text"
               placeholder=""
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={rentorEmail}
+              onChange={(e) => setRentorEmail(e.target.value)}
             />
             <label for="password">Password:</label>
             <input
@@ -80,8 +79,8 @@ function signup() {
               className={styles.splaceholder}
               type="number"
               placeholder=""
-              value={number}
-              onChange={(e) => setNumber(e.target.value)}
+              value={rentorNumber}
+              onChange={(e) => setRentorNumber(e.target.value)}
             />
 
             <div>
@@ -91,8 +90,8 @@ function signup() {
             </div>
             <div className={styles.loginlink}>
               <div className={styles.rentor}>
-        <Link className={styles.loginl} href="/rentorsignup">
-        Signup as Rentor
+        <Link className={styles.loginl} href="/signup">
+        Signup as Renter
           </Link>
               </div>
               <p>

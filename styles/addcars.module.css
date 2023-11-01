@@ -5,7 +5,7 @@
     padding: 15vh;
    }
   .signupform{
-    height:60vh;
+    height:65vh;
     width: 18vw;
     background-color: rgb(241, 231, 241);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -70,4 +70,7 @@
     display: flex;
     margin-left: 40px;
     margin-top: 10px;
+  }
+  .link{
+    text-decoration: none;
   }

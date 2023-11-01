@@ -11,7 +11,7 @@ function Pro() {
     <>
       <Head>
         <title>Car-Let: Profile</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Car-let Profile Page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

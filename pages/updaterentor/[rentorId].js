@@ -5,26 +5,26 @@ import Link from "next/link";
 import supabase from "@/config/supabaseClient";
 function Update() {
   const router = useRouter();
-  const { id } = router.query;
+  const { rentorId } = router.query;
 
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [number, setNumber] = useState("");
+  const [rentorfName, setRentorFName] = useState("");
+  const [rentorlName, setRentorLName] = useState("");
+  const [rentorEmail, setRentorEmail] = useState("");
+  const [rentorNumber, setRentorNumber] = useState("");
   const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!firstname || !lastname || !email || !number) {
+    if (!rentorfName || !rentorlName || !rentorEmail || !rentorNumber) {
       setError("Please fill up all the fields correctly");
       return;
     }
 
     const { data, error } = await supabase
-      .from("signup")
-      .update({ firstname, lastname, email, number })
-      .eq("id", id);
+      .from("rentorsignup")
+      .update({rentorfName, rentorlName, rentorEmail, rentorNumber })
+      .eq("rentorId", rentorId);
 
     if (error) {
       console.log(data);
@@ -35,16 +35,16 @@ function Update() {
       console.log(data);
       setError(null);
       console.log("Redirecting to userinfo page with id:", id);
-      router.push(`/userinfo/${id}`);
+      router.push(`/rentoraccount/${rentorId}`);
     }
   };
 
   useEffect(() => {
     const fetchUserDetails = async () => {
       const { data, error } = await supabase
-        .from("signup")
+        .from("rentorsignup")
         .select()
-        .eq("id", id)
+        .eq("rentorId", rentorId)
         .single();
 
       if (error) {
@@ -52,17 +52,17 @@ function Update() {
       }
 
       if (data) {
-        setFirstname(data.firstname);
-        setLastname(data.lastname);
-        setEmail(data.email);
-        setNumber(data.number);
+        setRentorFName(data.rentorfName);
+        setRentorLName(data.rentorlName);
+        setRentorEmail(data.rentorEmail);
+        setRentorNumber(data.rentorNumber);
       }
     };
 
-    if (id) {
+    if (rentorId) {
       fetchUserDetails();
     }
-  }, [id]);
+  }, [rentorId]);
 
   return (
       <div className={styles.signupbox}>
@@ -73,8 +73,8 @@ function Update() {
               className={styles.splaceholder}
               type="text"
               placeholder=""
-              value={firstname}
-              onChange={(e) => setFirstname(e.target.value)}
+              value={rentorfName}
+              onChange={(e) => setRentorFName(e.target.value)}
             />
             <br />
             <label for="lname">Last name:</label>
@@ -82,24 +82,24 @@ function Update() {
               className={styles.splaceholder}
               type="text"
               placeholder=""
-              value={lastname}
-              onChange={(e) => setLastname(e.target.value)}
+              value={rentorlName}
+              onChange={(e) => setRentorLName(e.target.value)}
             />
             <label for="Email">{"Email:"}</label>
             <input
               className={styles.splaceholder}
               type="text"
               placeholder=""
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={rentorEmail}
+              onChange={(e) => setRentorEmail(e.target.value)}
             />
             <label for="number">Phone number:</label>
             <input
               className={styles.splaceholder}
               type="number"
               placeholder=""
-              value={number}
-              onChange={(e) => setNumber(e.target.value)}
+              value={rentorNumber}
+              onChange={(e) => setRentorNumber(e.target.value)}
             />
 
             <div>
@@ -109,8 +109,8 @@ function Update() {
                 onClick={handleSubmit}
               >
                 <Link className={styles.link}
-        href="/userinfo/[id]"
-        as={`/userinfo/${id}`}> Update
+        href="/rentoraccount/[rentorId]"
+        as={`/rentoraccount/${rentorId}`}> Update
         </Link>
               </button>
               {error && <p>{error}</p>}
