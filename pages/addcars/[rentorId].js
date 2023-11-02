@@ -135,13 +135,13 @@ function signup() {
 
             <div>
               <button className={styles.signupbutton} onClick={handleSubmit}>
-              {/* <Link
+              <Link
                 className={styles.link}
                 href="/caradded/[rentorId]"
                 as={`/caradded/${user.rentorId}`}
-              > */}
+              >
                 ADD
-                {/* </Link> */}
+                </Link>
                 </button>
               {error && <p>{error}</p>}
               {success && <p>{success}</p>}

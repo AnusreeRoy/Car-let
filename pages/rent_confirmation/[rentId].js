@@ -41,7 +41,7 @@ const RentConfirmation = () => {
       <p>Thank you for renting a car!</p>
       </div>
       ) : (
-        <p>Loading car details...</p>
+        <p>Successful...</p>
       )}
     </div>
   );

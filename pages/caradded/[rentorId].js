@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from "next/router";
 import supabase from "@/config/supabaseClient";
+import { useState,useEffect } from 'react';
 function Caradded() {
     const router = useRouter();
     const {rentorId} = router.query;
@@ -34,7 +35,6 @@ function Caradded() {
             <div>
             <h1> Car Added successfully</h1>
             <p>
-              renter:{rentorId}
             </p></div>
     
 ): (

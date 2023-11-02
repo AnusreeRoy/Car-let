@@ -49,7 +49,9 @@ function Nav2() {
   }, []);
 
   return (
-    <div className={styles.drop}>
+    <div>
+    {user?(
+      <div className={styles.drop}>
       <div className={styles.dropdown} ref={menuRef}>
         <div className={styles.dropbtn} onClick={(e) => setOpen(!open)}>
           <BiSolidUser />
@@ -79,6 +81,10 @@ function Nav2() {
         )}
       </div>
       <Logoutbutton />
+    </div>
+     ) : (
+      <p>Loading car details...</p>
+    )}
     </div>
   );
 }
