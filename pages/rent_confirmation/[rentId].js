@@ -6,6 +6,7 @@ const RentConfirmation = () => {
   const router = useRouter();
   const { rentId } = router.query;
   const [rent, setRent] = useState('')
+  
   useEffect(() => {
     const fetchRentDetails = async () => {
       const { data, error } = await supabase

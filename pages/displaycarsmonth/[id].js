@@ -1,7 +1,7 @@
 import Carsmonth from "@/components/Carsmonth";
 import React from "react";
 
-function Carsmonth() {
+function Month() {
   return (
     <div>
       <Carsmonth />
@@ -9,4 +9,4 @@ function Carsmonth() {
   );
 }
 
-export default Carsmonth;
+export default Month;

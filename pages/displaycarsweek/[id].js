@@ -1,7 +1,7 @@
 import Carsweek from "@/components/Carsweek";
 import React from "react";
 
-function Carsweek() {
+function Week() {
   return (
     <div>
       <Carsweek />
@@ -9,4 +9,4 @@ function Carsweek() {
   );
 }
 
-export default Carsweek;
+export default Week;
