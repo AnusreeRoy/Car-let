@@ -5,7 +5,6 @@ import styles from "../styles/home.module.css";
 import Footer from "@/components/Footer";
 
 function index() {
-  const images = ["/covcar1.jpeg", "/covcar2.jpeg", "/covcar3.jpeg"];
   return (
     <div className={styles.pg}>
       <Head>
